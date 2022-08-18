@@ -1,0 +1,2 @@
+select concat(EMPLOYEE.Fname,' ',EMPLOYEE.Minit,' ',EMPLOYEE.Lname),EMPLOYEE.Ssn,EMPLOYEE.Dno,DEPARTMENT.Dname from EMPLOYEE join DEPARTMENT on EMPLOYEE.Ssn=DEPARTMENT.Mgr_ssn join WORKS_ON on DEPARTMENT.Mgr_ssn=WORKS_ON.Essn where WORKS_ON.Hours<40;
+

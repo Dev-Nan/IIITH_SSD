@@ -1,0 +1,1 @@
+select count(distinct(DEPT_LOCATIONS.Dlocation)) as Count_Location from DEPT_LOCATIONS where DEPT_LOCATIONS.Dnumber in (select DEPARTMENT.Dnumber from DEPARTMENT where DEPARTMENT.Mgr_ssn in (select DEPENDENT.Essn from DEPENDENT where DEPENDENT.Sex='F' group by DEPENDENT.Essn having count(DEPENDENT.Sex>=2)));
