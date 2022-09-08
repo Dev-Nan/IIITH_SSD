@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    </head>
+    <body class="bd">
+    <div class="sr">Student Records</div>
+    <div class="t1">
+    <div class="tt1">
+        <input type="text">
+    </div>
+    <div class="tt2">
+        <input type="text">
+    </div>
+    <div class="tt3">
+        <button type="button" onclick="Add()">Add New</button>
+
+    </div>
+    </div>
+        <table id="tb">
+          <tr>
+            <th>Roll No.</th>
+            <th>Student Name</th>
+          </tr>
+        </table>
+        <div class="dl">Delete Last Entry</div>
+        <script>
+            function Add() {
+                var tab=document.getElementsById("tb");
+                var r=tab.insertRow(0);
+                var c1= r.insertCell(0);
+                var c2= r.insertCell(1);
+                c1.innerHTML="roll";
+                c2.innerHTML="name";
+            }
+        </script>
+</body>
+</html>
